@@ -26,6 +26,17 @@ class Phone {
     }
 
     public void setCharge(double charge) {
-        this.charge = charge;
+        if (charge>100) this.charge = 100;
+        if (charge<0) this.charge=0;
+        else this.charge = charge;
+    }
+    public static void callin (double charge){
+        if(charge>=2)
+            System.out.println("Бип-бип");
+    }
+    public static double chargin (double charge, double chaTime) {
+        if (charge < 100) charge += chaTime;
+        if (charge > 100) charge = 100;
+    return charge;
     }
 }

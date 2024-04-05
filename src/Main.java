@@ -28,7 +28,7 @@ class Phone {
     public void setCharge(double charge) {
         if (charge>100) this.charge = 100;
         if (charge<0) this.charge=0;
-        else this.charge = charge;
+        if(charge>=0&&charge<=100) this.charge = charge;
     }
     public static void callin (double charge){
         if(charge>=2)
